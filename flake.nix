@@ -67,6 +67,15 @@ lspconfig.clangd.setup {
   capabilities = require('cmp_nvim_lsp').default_capabilities(),
 }
 
+lspconfig.arduino_language_server.setup {
+  cmd = {
+    "arduino-language-server", "-fqbn", "arduino:avr:nano"
+  },
+
+  capabilities = require('cmp_nvim_lsp').default_capabilities(),
+}
+
+
 lspconfig.pyright.setup {
   capabilities = require('cmp_nvim_lsp').default_capabilities(),
 }
