@@ -27,6 +27,7 @@ vim.o.clipboard = 'unnamedplus'
 
 -- Keymaps
 vim.keymap.set("n", "<leader>q", ":q<CR>")
+vim.keymap.set("n", "<leader>Q", ":q!<CR>")
 vim.keymap.set("n", "<leader>w", ":w<CR>")
 vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float)
 
@@ -94,8 +95,6 @@ telescope.setup {
         }
     }
 }
---require('telescope').load_extension('fzy_native')
-
 --Telescope keybinds
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })
@@ -127,14 +126,12 @@ vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help ta
           rust
           bash
           markdown
+          systemverilog
       ]
     )) # syntax highligther
 
     telescope-nvim # file browser
     telescope-zf-native-nvim # fast sorting algorithm for telescope
-
-    vim-devicons # icons :)
-
 	];
 
         };
